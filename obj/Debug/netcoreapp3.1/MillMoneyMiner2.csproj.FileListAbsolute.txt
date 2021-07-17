@@ -1,0 +1,17 @@
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.exe
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.deps.json
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.runtimeconfig.json
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.runtimeconfig.dev.json
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.dll
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\bin\Debug\netcoreapp3.1\MillMoneyMiner2.pdb
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.csproj.AssemblyReference.cache
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.Form1.resources
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.Form2.resources
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.Properties.Resources.resources
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.csproj.GenerateResource.cache
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.AssemblyInfoInputs.cache
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.AssemblyInfo.cs
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.csproj.CoreCompileInputs.cache
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.dll
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.pdb
+D:\Data\VisualStudio\MillMoneyMiner2\MillMoneyMiner2\obj\Debug\netcoreapp3.1\MillMoneyMiner2.genruntimeconfig.cache
