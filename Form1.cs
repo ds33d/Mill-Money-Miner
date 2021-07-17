@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace MillMoneyMiner2
 {
@@ -32,7 +34,44 @@ namespace MillMoneyMiner2
 
             var formMine = new Form2();
             formMine.Show();
+             void Mining()
+            {
+                Debug.WriteLine("MINING STARTED");
 
+                var computerGenRandom = new Random();
+                var userGuessRandom = new Random();
+
+                Debug.WriteLine("Numbers generated");
+
+                computerGenRandom.Next(100);
+                userGuessRandom.Next(100);
+
+                Debug.WriteLine("Computer generated number:" + computerGenRandom.ToString());
+                Debug.WriteLine("User generated number:" + userGuessRandom.ToString());
+
+                Debug.WriteLine("Setting next numbers");
+                var userGuess = userGuessRandom.Next(100);
+                var compGuess = userGuessRandom.Next(100);
+
+                Debug.WriteLine("About to start guessing");
+                while (userGuess != compGuess)
+                {
+                    Debug.WriteLine("Starting guess");
+                    Debug.WriteLine("Computer generated number:");
+                    Debug.WriteLine(compGuess.ToString());
+                    userGuess = userGuessRandom.Next(100);
+                    Debug.WriteLine(userGuess.ToString());
+
+
+                }
+
+               
+
+
+
+            }
+            Mining();
+            formMine.Close();
 
 
         }

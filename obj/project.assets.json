@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Data\\VisualStudio\\MillMoneyMiner2\\MillMoneyMiner2\\MillMoneyMiner2.csproj",
+      "projectUniqueName": "D:\\Data\\Github\\Mill-Money-Miner\\MillMoneyMiner2.csproj",
       "projectName": "MillMoneyMiner2",
-      "projectPath": "D:\\Data\\VisualStudio\\MillMoneyMiner2\\MillMoneyMiner2\\MillMoneyMiner2.csproj",
+      "projectPath": "D:\\Data\\Github\\Mill-Money-Miner\\MillMoneyMiner2.csproj",
       "packagesPath": "C:\\Users\\Donald Seder\\.nuget\\packages\\",
-      "outputPath": "D:\\Data\\VisualStudio\\MillMoneyMiner2\\MillMoneyMiner2\\obj\\",
+      "outputPath": "D:\\Data\\Github\\Mill-Money-Miner\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Donald Seder\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
