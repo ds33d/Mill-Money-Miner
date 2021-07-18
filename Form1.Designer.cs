@@ -32,16 +32,23 @@ namespace MillMoneyMiner2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMine = new System.Windows.Forms.Button();
-            this.txtLogger = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblCompNum = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblMillCount = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtLogger = new System.Windows.Forms.MaskedTextBox();
+            this.txtLogger2 = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblCompNum2 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblCompNum3 = new System.Windows.Forms.Label();
+            this.txtLogger3 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,23 +73,6 @@ namespace MillMoneyMiner2
             this.btnMine.UseVisualStyleBackColor = true;
             this.btnMine.Click += new System.EventHandler(this.btnMine_Click);
             // 
-            // txtLogger
-            // 
-            this.txtLogger.Location = new System.Drawing.Point(316, 91);
-            this.txtLogger.Name = "txtLogger";
-            this.txtLogger.Size = new System.Drawing.Size(201, 291);
-            this.txtLogger.TabIndex = 2;
-            this.txtLogger.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Logger:";
-            // 
             // lblCompNum
             // 
             this.lblCompNum.AutoSize = true;
@@ -96,9 +86,10 @@ namespace MillMoneyMiner2
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblCompNum);
-            this.groupBox1.Location = new System.Drawing.Point(316, 12);
+            this.groupBox1.Controls.Add(this.txtLogger);
+            this.groupBox1.Location = new System.Drawing.Point(317, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(91, 57);
+            this.groupBox1.Size = new System.Drawing.Size(121, 86);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "To Guess";
@@ -106,7 +97,7 @@ namespace MillMoneyMiner2
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblMillCount);
-            this.groupBox2.Location = new System.Drawing.Point(414, 13);
+            this.groupBox2.Location = new System.Drawing.Point(317, 196);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(103, 56);
             this.groupBox2.TabIndex = 7;
@@ -134,16 +125,79 @@ namespace MillMoneyMiner2
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtLogger
+            // 
+            this.txtLogger.Location = new System.Drawing.Point(12, 52);
+            this.txtLogger.Name = "txtLogger";
+            this.txtLogger.Size = new System.Drawing.Size(100, 23);
+            this.txtLogger.TabIndex = 9;
+            // 
+            // txtLogger2
+            // 
+            this.txtLogger2.Location = new System.Drawing.Point(7, 57);
+            this.txtLogger2.Name = "txtLogger2";
+            this.txtLogger2.Size = new System.Drawing.Size(100, 23);
+            this.txtLogger2.TabIndex = 10;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblCompNum2);
+            this.groupBox3.Controls.Add(this.txtLogger2);
+            this.groupBox3.Location = new System.Drawing.Point(444, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(118, 86);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "To Guess";
+            // 
+            // lblCompNum2
+            // 
+            this.lblCompNum2.AutoSize = true;
+            this.lblCompNum2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCompNum2.Location = new System.Drawing.Point(6, 24);
+            this.lblCompNum2.Name = "lblCompNum2";
+            this.lblCompNum2.Size = new System.Drawing.Size(101, 30);
+            this.lblCompNum2.TabIndex = 4;
+            this.lblCompNum2.Text = "lblGuess2";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lblCompNum3);
+            this.groupBox4.Controls.Add(this.txtLogger3);
+            this.groupBox4.Location = new System.Drawing.Point(317, 104);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(121, 86);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "To Guess";
+            // 
+            // lblCompNum3
+            // 
+            this.lblCompNum3.AutoSize = true;
+            this.lblCompNum3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCompNum3.Location = new System.Drawing.Point(12, 19);
+            this.lblCompNum3.Name = "lblCompNum3";
+            this.lblCompNum3.Size = new System.Drawing.Size(68, 30);
+            this.lblCompNum3.TabIndex = 4;
+            this.lblCompNum3.Text = "label2";
+            // 
+            // txtLogger3
+            // 
+            this.txtLogger3.Location = new System.Drawing.Point(12, 52);
+            this.txtLogger3.Name = "txtLogger3";
+            this.txtLogger3.Size = new System.Drawing.Size(100, 23);
+            this.txtLogger3.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 400);
+            this.ClientSize = new System.Drawing.Size(583, 400);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtLogger);
             this.Controls.Add(this.btnMine);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -153,8 +207,11 @@ namespace MillMoneyMiner2
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -162,13 +219,19 @@ namespace MillMoneyMiner2
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMine;
-        private System.Windows.Forms.RichTextBox txtLogger;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCompNum;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblMillCount;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox txtLogger;
+        private System.Windows.Forms.MaskedTextBox txtLogger2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblCompNum2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label lblCompNum3;
+        private System.Windows.Forms.MaskedTextBox txtLogger3;
     }
+
 }
 
