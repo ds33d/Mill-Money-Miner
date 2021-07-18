@@ -15,13 +15,88 @@ namespace MillMoneyMiner2
     
     public partial class Form1 : Form   
     {
-        public static int x = 0;
         
+        public static int x = 0;
+        public int millmoney = 0;
+        public string logging = "";
+        bool mine = true;
+        
+        void Mining()
+        {
+            Debug.WriteLine("MINING STARTED");
+            var computerGenRandom = new Random();
+            var userGuessRandom = new Random();
+
+            Debug.WriteLine("Setting next numbers");
+            var userGuess = userGuessRandom.Next(1000);
+            var compGuess = userGuessRandom.Next(1000);
+
+            Debug.WriteLine("About to start guessing");
+            while (mine)
+            {
+
+                Debug.WriteLine("Starting guess");
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    logging = logging + "Starting guess" + "\n";
+                    txtLogger.Text = logging;
+                });
+                Debug.WriteLine("Computer generated number:");
+                Debug.WriteLine(compGuess.ToString());
+
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    lblCompNum.Text = compGuess.ToString();
+
+                });
+
+                userGuess = userGuessRandom.Next(1000);
+                this.Invoke((MethodInvoker)delegate ()
+                {
+
+                    logging = logging + userGuess.ToString() + "\n";
+                    txtLogger.Text = logging;
+                    txtLogger.ScrollToCaret();
+                });
+                Debug.WriteLine(userGuess.ToString());
+
+
+
+
+                if (userGuess.ToString() == compGuess.ToString())
+                {
+                    millmoney++;
+                    Debug.WriteLine("$MILL you have:");
+                    Debug.WriteLine(millmoney.ToString());
+                    logging = millmoney.ToString();
+                    this.Invoke((MethodInvoker)delegate ()
+                    {
+                        lblMillCount.Text = millmoney.ToString();
+                        txtLogger.Text = logging;
+                    });
+
+                    if (button1.Enabled)
+                    {
+                        break;
+                    }
+
+
+                }
+
+            }
+            this.Invoke((MethodInvoker)delegate ()
+            {
+                txtLogger.Text = "Mining stopped by user";
+            });
+
+        }
+
         public Form1()
         {
             
             InitializeComponent();
-            
+            lblMillCount.Text = "None";
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -32,46 +107,10 @@ namespace MillMoneyMiner2
         public void btnMine_Click(object sender, EventArgs e)
         {
 
-            var formMine = new Form2();
-            formMine.Show();
-             void Mining()
-            {
-                Debug.WriteLine("MINING STARTED");
-
-                var computerGenRandom = new Random();
-                var userGuessRandom = new Random();
-
-                Debug.WriteLine("Numbers generated");
-
-                computerGenRandom.Next(100);
-                userGuessRandom.Next(100);
-
-                Debug.WriteLine("Computer generated number:" + computerGenRandom.ToString());
-                Debug.WriteLine("User generated number:" + userGuessRandom.ToString());
-
-                Debug.WriteLine("Setting next numbers");
-                var userGuess = userGuessRandom.Next(100);
-                var compGuess = userGuessRandom.Next(100);
-
-                Debug.WriteLine("About to start guessing");
-                while (userGuess != compGuess)
-                {
-                    Debug.WriteLine("Starting guess");
-                    Debug.WriteLine("Computer generated number:");
-                    Debug.WriteLine(compGuess.ToString());
-                    userGuess = userGuessRandom.Next(100);
-                    Debug.WriteLine(userGuess.ToString());
-
-
-                }
-
-               
-
-
-
-            }
-            Mining();
-            formMine.Close();
+            mine = true;
+            Thread thread = new Thread(Mining);
+            thread.Start();
+            
 
 
         }
@@ -93,6 +132,11 @@ namespace MillMoneyMiner2
         {
             System.Diagnostics.Debug.WriteLine("Shown");
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mine = false;
         }
     }
 }
