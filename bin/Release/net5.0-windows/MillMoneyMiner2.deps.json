@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MillMoneyMiner2/1.0.0": {
+        "runtime": {
+          "MillMoneyMiner2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MillMoneyMiner2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
