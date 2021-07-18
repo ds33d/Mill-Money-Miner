@@ -23,6 +23,7 @@ namespace MillMoneyMiner2
         
         void Mining()
         {
+            logging = "";
             Debug.WriteLine("MINING STARTED");
             var computerGenRandom = new Random();
             var userGuessRandom = new Random();
@@ -40,6 +41,7 @@ namespace MillMoneyMiner2
                 {
                     logging = logging + "Starting guess" + "\n";
                     txtLogger.Text = logging;
+                    txtLogger.ScrollToCaret();
                 });
                 Debug.WriteLine("Computer generated number:");
                 Debug.WriteLine(compGuess.ToString());
@@ -68,26 +70,26 @@ namespace MillMoneyMiner2
                     millmoney++;
                     Debug.WriteLine("$MILL you have:");
                     Debug.WriteLine(millmoney.ToString());
-                    logging = millmoney.ToString();
+                    logging = logging + "You earned another $MILL!";
                     this.Invoke((MethodInvoker)delegate ()
                     {
                         lblMillCount.Text = millmoney.ToString();
-                        txtLogger.Text = logging;
+                        txtLogger.Text = logging.ToString();
+                        txtLogger.ScrollToCaret();
                     });
 
-                    if (button1.Enabled)
-                    {
-                        break;
-                    }
-
-
+                    compGuess = userGuessRandom.Next(1000);
                 }
 
             }
-            this.Invoke((MethodInvoker)delegate ()
+            if (mine == false)
             {
-                txtLogger.Text = "Mining stopped by user";
-            });
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    txtLogger.Text = "Mining stopped by user";
+                });
+            }
+            
 
         }
 
