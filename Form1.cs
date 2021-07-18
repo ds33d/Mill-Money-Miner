@@ -23,6 +23,7 @@ namespace MillMoneyMiner2
         
         void Mining()
         {
+            logging = "";
             Debug.WriteLine("MINING STARTED");
             var computerGenRandom = new Random();
             var userGuessRandom = new Random();
@@ -33,16 +34,7 @@ namespace MillMoneyMiner2
 
             Debug.WriteLine("About to start guessing");
             while (mine)
-            {
-
-                Debug.WriteLine("Starting guess");
-                this.Invoke((MethodInvoker)delegate ()
-                {
-                    logging = logging + "Starting guess" + "\n";
-                    txtLogger.Text = logging;
-                });
-                Debug.WriteLine("Computer generated number:");
-                Debug.WriteLine(compGuess.ToString());
+            {              
 
                 this.Invoke((MethodInvoker)delegate ()
                 {
@@ -58,36 +50,33 @@ namespace MillMoneyMiner2
                     txtLogger.Text = logging;
                     txtLogger.ScrollToCaret();
                 });
-                Debug.WriteLine(userGuess.ToString());
+                
 
 
 
 
                 if (userGuess.ToString() == compGuess.ToString())
                 {
-                    millmoney++;
-                    Debug.WriteLine("$MILL you have:");
-                    Debug.WriteLine(millmoney.ToString());
-                    logging = millmoney.ToString();
+                    millmoney++;                    
                     this.Invoke((MethodInvoker)delegate ()
                     {
                         lblMillCount.Text = millmoney.ToString();
-                        txtLogger.Text = logging;
+                        txtLogger.Text = null;
+                        txtLogger.Text = "You earned another $MILL!";
                     });
-
-                    if (button1.Enabled)
-                    {
-                        break;
-                    }
-
-
+                    Thread.Sleep(1000);
+                    compGuess = userGuessRandom.Next(1000);
                 }
 
             }
-            this.Invoke((MethodInvoker)delegate ()
+            if (mine == false)
             {
-                txtLogger.Text = "Mining stopped by user";
-            });
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    txtLogger.Text = "Mining stopped by user";
+                });
+            }
+            
 
         }
 
